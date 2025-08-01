@@ -1,0 +1,364 @@
+:root {
+  --font-xxs: 1.6rem;
+  --font-xs: 2rem;
+  --font-s: 2.4rem;
+  --font-m: 2.2rem;
+  --font-l: 3.6rem;
+  --font-xl: 4rem;
+  --font-xxl: 7rem;
+  --space-3xs: 0.4rem;
+  --space-xxs: 0.1rem;
+  --space-xs: 1.6rem;
+  --space-s: 1rem;
+  --space-m: 3rem;
+  --space-l: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 9rem;
+  --font-family-primary: "ABC Camera Plain", sans-serif;
+  --font-family-secondary: "ABC Camera Variable", sans-serif;
+  --primary-dark: rgb(26, 26, 26);
+}
+@media (max-width: 768px) {
+  :root {
+    --font-m: 1.5rem;
+    --font-l: 2.5rem;
+    --font-xl: 3rem;
+    --font-xxl: 4rem;
+    --space-xs: 1rem;
+    --space-s: 0.75rem;
+    --space-m: 1.5rem;
+    --space-l: 1rem;
+    --space-xl: 1.5rem;
+  }
+}
+.polecat-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  transition: all 0.3s ease;
+  background: transparent;
+  padding: 0.1rem;
+}
+.polecat-navbar.scrolled {
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+.polecat-navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.polecat-logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.polecat-navbar.scrolled .polecat-logo a {
+  color: #fff;
+}
+.polecat-menu-button button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.polecat-navbar.scrolled .polecat-menu-button button {
+  border-color: #fff;
+  color: #fff;
+}
+.polecat-menu-button button:hover {
+  background: #fff;
+  color: var(--primary-dark);
+}
+.polecat-navbar.scrolled .polecat-menu-button button:hover {
+  background: #fff;
+  color: var(--primary-dark);
+}
+.polecat-menu-button span {
+  margin-right: 0.75rem;
+}
+.menu-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.polecat-menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+  background: var(--primary-dark);
+  border-radius: var(--space-s);
+  right: var(--space-xxs);
+  top: var(--space-xxs);
+  bottom: var(--space-xxs);
+  border: 1px solid #333;
+  min-width: 66vw;
+  overflow: hidden;
+  opacity: 1;
+  pointer-events: all;
+}
+@media (max-width: 768px) {
+  .polecat-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    min-width: auto;
+    border-radius: 0;
+    border: none;
+  }
+}
+.polecat-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.polecat-agency-tag {
+  background: #fff;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+.polecat-agency-tag span {
+  font-size: 0.875rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  color: var(--primary-dark);
+}
+.polecat-close-button {
+  background: #fff;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  color: var(--primary-dark);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+.polecat-close-button:hover {
+  background: #f3f4f6;
+}
+.polecat-close-button span {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+.polecat-menu-top {
+  padding: var(--space-xl) var(--space-l) var(--space-l);
+  flex-grow: 1;
+  transition: padding 0.3s cubic-bezier(0.58, 0.95, 0.91, 1.24);
+}
+.polecat-menu-description-desktop {
+  display: none;
+  font-size: var(--font-m);
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  text-align: left;
+  font-family: var(--font-family-primary);
+  color: #fff;
+}
+.polecat-menu-description-mobile {
+  display: none;
+  font-size: var(--font-m);
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.04em;
+  text-align: left;
+  font-family: var(--font-family-primary);
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .polecat-menu-description-desktop {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .polecat-menu-description-mobile {
+    display: block;
+  }
+}
+.polecat-menu-links {
+  padding-bottom: var(--space-l);
+}
+.polecat-link-container {
+  display: block;
+}
+.polecat-menu-link {
+  position: relative;
+  padding-top: var(--space-l);
+  padding-bottom: -1.2rem;
+  border-top: 1px solid #333;
+  cursor: pointer;
+  height: calc(var(--space-l) + 5rem + 1px);
+  transition: height 0.3s cubic-bezier(0.26, 1.27, 0.95, 1.08),
+    background-color 0.3s, color 0.3s;
+  overflow: hidden;
+}
+.polecat-link-text {
+  font-size: 6rem;
+  line-height: 100%;
+  text-wrap: nowrap;
+  font-family: var(--font-family-secondary);
+  letter-spacing: -0.05em;
+  line-height: 90%;
+  text-align: center;
+  display: block;
+  font-weight: 400;
+  color: #fff;
+}
+.polecat-menu-link:after {
+  content: "→";
+  font-size: var(--font-s);
+  position: absolute;
+  top: var(--space-xs);
+  right: var(--space-xs);
+  border-radius: var(--space-xs);
+  padding: var(--space-xxs) var(--space-s) var(--space-xxs) var(--space-xs);
+  background-color: #fff;
+  font-family: var(--font-family-secondary);
+  border: 1px solid #333;
+  line-height: 100%;
+  transition: all 0.3s cubic-bezier(0.745, 0.755, 0.405, 1.545);
+  color: var(--primary-dark);
+}
+@media (min-width: 960px) {
+  .polecat-menu-link:hover {
+    background-color: var(--hover-link-background-color);
+    color: var(--hover-link-font-color);
+    height: calc(var(--space-l) + var(--space-l) + 6rem + 1px);
+    box-shadow: 0 0 #000;
+  }
+}
+@media (max-width: 959px) and (min-width: 769px) {
+  .polecat-menu-link {
+    height: 8rem;
+  }
+  .polecat-link-text {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .polecat-navbar-container {
+    padding: 0.75rem 1rem;
+  }
+  .polecat-logo a {
+    font-size: 1.5rem;
+  }
+  .polecat-menu-button button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  .polecat-menu-button span {
+    margin-right: 0.5rem;
+  }
+  .menu-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  .polecat-menu-header {
+    padding: 1.5rem 1rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .polecat-agency-tag {
+    padding: 0.5rem 1rem;
+  }
+  .polecat-agency-tag span {
+    font-size: 0.75rem;
+  }
+  .polecat-close-button {
+    padding: 0.5rem 1rem;
+  }
+  .polecat-close-button span {
+    font-size: 0.75rem;
+  }
+  .polecat-menu-top {
+    padding: 1rem 1rem 0.5rem;
+  }
+  .polecat-menu-description-mobile {
+    font-size: 1.125rem;
+    line-height: 130%;
+  }
+  .polecat-link-text {
+    font-size: 2.5rem;
+    line-height: 95%;
+  }
+  .polecat-menu-link {
+    height: 6rem;
+    padding-top: 1rem;
+  }
+  .polecat-menu-link:after {
+    font-size: 1.25rem;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .polecat-navbar-container {
+    padding: 0.5rem 0.75rem;
+  }
+  .polecat-logo a {
+    font-size: 1.25rem;
+  }
+  .polecat-menu-button button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  .polecat-menu {
+    right: 0.25rem;
+    top: 0.25rem;
+    bottom: 0.25rem;
+    left: 0.25rem;
+    width: calc(100vw - 0.5rem);
+  }
+  .polecat-menu-header {
+    padding: 0.75rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  .polecat-agency-tag,
+  .polecat-close-button {
+    text-align: center;
+    width: 100%;
+  }
+  .polecat-menu-description-mobile {
+    font-size: 1rem;
+    line-height: 140%;
+  }
+  .polecat-link-text {
+    font-size: 2rem;
+    line-height: 100%;
+  }
+  .polecat-menu-link {
+    height: 5rem;
+    padding-top: 0.75rem;
+  }
+  .polecat-menu-link:after {
+    font-size: 1rem;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
