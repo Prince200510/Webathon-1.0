@@ -39,12 +39,16 @@
   z-index: 50;
   transition: all 0.3s ease;
   background: transparent;
+  /* background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
   padding: 0.1rem;
 }
 .polecat-navbar.scrolled {
-  background: rgba(26, 26, 26, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 .polecat-navbar-container {
   max-width: 1200px;
@@ -59,10 +63,20 @@
   font-weight: bold;
   color: #fff;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #fff, #f0f0f0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 .polecat-navbar.scrolled .polecat-logo a {
-  color: #fff;
+  background: linear-gradient(135deg, #fff, #e0e0e0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
 }
 .polecat-menu-button button {
   display: inline-flex;
@@ -70,25 +84,32 @@
   justify-content: center;
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
-  border: 2px solid #fff;
-  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   color: #fff;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 .polecat-navbar.scrolled .polecat-menu-button button {
-  border-color: #fff;
+  border-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.15);
   color: #fff;
 }
 .polecat-menu-button button:hover {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
   color: var(--primary-dark);
+  border-color: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 .polecat-navbar.scrolled .polecat-menu-button button:hover {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
   color: var(--primary-dark);
+  transform: translateY(-2px);
 }
 .polecat-menu-button span {
   margin-right: 0.75rem;

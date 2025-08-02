@@ -11,6 +11,7 @@ import InfiniteMarquee from './components/InfiniteMarquee';
 import OurTeamSection from './components/OurTeamSection';
 import Footer from './components/Footer';
 import EnhancedAnimatedBackground from './components/EnhancedAnimatedBackground';
+import Purple_model from './components/Purple_model';
 import './App.css';
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
           <AICodeGallery />
           <InfiniteMarquee />
           <OurTeamSection />
+          <Purple_model />
           <Footer />
         </main>
       </div>

@@ -63,7 +63,7 @@ const AIMemeShowcase = () => {
   ];
 
   return (
-    <section id="ai-memes" className="min-h-screen relative py-20 px-4 overflow-hidden"
+    <section id="ai-meme-showcase" className="min-h-screen relative py-20 px-4 overflow-hidden"
              style={{
                background: 'linear-gradient(135deg, rgb(26, 26, 26) 0%, rgb(17, 17, 17) 50%, rgb(26, 26, 26) 100%)'
              }}>

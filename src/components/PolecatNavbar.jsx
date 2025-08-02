@@ -8,26 +8,26 @@ const PolecatNavbar = () => {
 
   const menuItems = [
     {
-      name: 'ABOUT US',
-      href: '#about',
+      name: 'AI SERVICES',
+      href: '#featured-products',
       hoverColor: '#ff561e',
       fontColor: '#000000'
     },
     {
-      name: 'WORKS',
-      href: '#works',
+      name: 'AI MEME',
+      href: '#ai-meme-showcase',
       hoverColor: '#ffb30f',
       fontColor: '#000000'
     },
     {
-      name: 'SERVICES',
-      href: '#services',
+      name: 'INFINITE MARQUEE',
+      href: '#infinite-marquee',
       hoverColor: '#ffead7',
       fontColor: '#000000'
     },
     {
-      name: 'CONTACTS',
-      href: '#contacts',
+      name: 'OUR TEAM',
+      href: '#our-team',
       hoverColor: '#b91c3b',
       fontColor: '#000000'
     }
@@ -115,7 +115,7 @@ const PolecatNavbar = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="polecat-agency-tag"
               >
-                <span>POLECAT AGENCY</span>
+                <span>Team Duo Dare ⚔️💻</span>
               </motion.div>
               <motion.button
                 initial={{ opacity: 0, x: 30 }}
@@ -148,8 +148,6 @@ const PolecatNavbar = () => {
                 We make digital products<br />for complex challenges:<br />from mobile apps<br />to enterprise systems.
               </motion.span>
             </div>
-
-            {/* Menu Items */}
             <div className="polecat-menu-links">
               {menuItems.map((item, index) => (
                 <motion.div

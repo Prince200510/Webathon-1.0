@@ -59,7 +59,7 @@ const InfiniteMarquee = () => {
   const duplicatedImages = [...marqueeImages, ...marqueeImages, ...marqueeImages];
 
   return (
-    <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 overflow-hidden relative">
+    <section id="infinite-marquee" className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 overflow-hidden relative">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
