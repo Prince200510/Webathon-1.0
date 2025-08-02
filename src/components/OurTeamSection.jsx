@@ -62,7 +62,7 @@ const OurTeamSection = () => {
       </div>
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-20">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -93,7 +93,7 @@ const OurTeamSection = () => {
                   {String(index + 1).padStart(2, '0')}
                 </div>
                 <div className="flex-1 text-center">
-                  <motion.h3 
+                  <motion.h3
                     className="text-3xl md:text-4xl font-light text-white transition-colors duration-300 group-hover:text-purple-400"
                     whileHover={{ x: 10 }}
                     transition={{ duration: 0.2 }}

@@ -64,11 +64,11 @@ const AIMemeShowcase = () => {
 
   return (
     <section id="ai-meme-showcase" className="min-h-screen relative py-20 px-4 overflow-hidden"
-             style={{
-               background: 'linear-gradient(135deg, rgb(26, 26, 26) 0%, rgb(17, 17, 17) 50%, rgb(26, 26, 26) 100%)'
-             }}>
+      style={{
+        background: 'linear-gradient(135deg, rgb(26, 26, 26) 0%, rgb(17, 17, 17) 50%, rgb(26, 26, 26) 100%)'
+      }}>
       <EnhancedAnimatedBackground />
-      
+
       <div className="container mx-auto max-w-7xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -76,7 +76,7 @@ const AIMemeShowcase = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
@@ -92,13 +92,13 @@ const AIMemeShowcase = () => {
           >
             AI Meme Central 🤖
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed"
-            style={{ 
-              textShadow: '0 0 15px rgba(255, 255, 255, 0.3)' 
+            style={{
+              textShadow: '0 0 15px rgba(255, 255, 255, 0.3)'
             }}
           >
             Where artificial intelligence meets comedy gold. Dive into the hilarious world of AI memes, developer humor, and tech culture shenanigans!
@@ -106,9 +106,9 @@ const AIMemeShowcase = () => {
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {aiMemes.map((meme, index) => (
-            <MemeCard 
-              key={meme.id} 
-              meme={meme} 
+            <MemeCard
+              key={meme.id}
+              meme={meme}
               index={index}
               hoveredIndex={hoveredIndex}
               setHoveredIndex={setHoveredIndex}
@@ -131,11 +131,11 @@ const AIMemeShowcase = () => {
               key={index}
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ 
-                delay: 1.0 + index * 0.1, 
-                duration: 0.5 
+              transition={{
+                delay: 1.0 + index * 0.1,
+                duration: 0.5
               }}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.1,
                 y: -5
               }}
@@ -147,22 +147,22 @@ const AIMemeShowcase = () => {
                 boxShadow: `0 0 30px ${stat.color}, inset 0 0 30px rgba(255, 255, 255, 0.05)`
               }}
             >
-              <div className="text-4xl mb-3" 
-                   style={{ 
-                     filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.5))' 
-                   }}>
+              <div className="text-4xl mb-3"
+                style={{
+                  filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.5))'
+                }}>
                 {stat.icon}
               </div>
               <div className="text-2xl font-bold text-purple-300 mb-1"
-                   style={{ 
-                     textShadow: '0 0 15px rgba(168, 85, 247, 0.6)' 
-                   }}>
+                style={{
+                  textShadow: '0 0 15px rgba(168, 85, 247, 0.6)'
+                }}>
                 {stat.number}
               </div>
               <div className="text-gray-300 text-sm"
-                   style={{ 
-                     textShadow: '0 0 10px rgba(255, 255, 255, 0.3)' 
-                   }}>
+                style={{
+                  textShadow: '0 0 10px rgba(255, 255, 255, 0.3)'
+                }}>
                 {stat.text}
               </div>
             </motion.div>
@@ -178,10 +178,10 @@ const MemeCard = ({ meme, index, hoveredIndex, setHoveredIndex }) => {
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ 
-        duration: 0.6, 
+      transition={{
+        duration: 0.6,
         delay: index * 0.1,
-        ease: "easeOut" 
+        ease: "easeOut"
       }}
       className="relative group cursor-pointer"
       onMouseEnter={() => setHoveredIndex(index)}
@@ -207,14 +207,14 @@ const MemeCard = ({ meme, index, hoveredIndex, setHoveredIndex }) => {
         )}
       </AnimatePresence>
       <motion.div
-        whileHover={{ 
+        whileHover={{
           y: -8,
           rotateX: 8,
           rotateY: 8,
           scale: 1.02
         }}
         className="relative rounded-2xl p-6 overflow-hidden transform-gpu"
-        style={{ 
+        style={{
           transformStyle: "preserve-3d",
           background: 'rgba(255, 255, 255, 0.08)',
           backdropFilter: 'blur(20px)',
@@ -240,10 +240,10 @@ const MemeCard = ({ meme, index, hoveredIndex, setHoveredIndex }) => {
         />
         <div className="relative z-10" style={{ transform: "translateZ(60px)" }}>
           <div className="flex items-center justify-between mb-4">
-            <motion.div 
+            <motion.div
               className="text-4xl"
-              whileHover={{ 
-                scale: 1.3, 
+              whileHover={{
+                scale: 1.3,
                 rotate: [0, -15, 15, 0],
                 transition: { duration: 0.6 }
               }}
@@ -254,17 +254,17 @@ const MemeCard = ({ meme, index, hoveredIndex, setHoveredIndex }) => {
               {meme.emoji}
             </motion.div>
             <span className="text-purple-200 text-xs font-medium px-3 py-1 rounded-full transition-all duration-300"
-                  style={{
-                    background: 'rgba(168, 85, 247, 0.25)',
-                    backdropFilter: 'blur(10px)',
-                    border: '1px solid rgba(168, 85, 247, 0.4)',
-                    boxShadow: '0 0 20px rgba(168, 85, 247, 0.3)',
-                    textShadow: '0 0 10px rgba(255, 255, 255, 0.8)'
-                  }}>
+              style={{
+                background: 'rgba(168, 85, 247, 0.25)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(168, 85, 247, 0.4)',
+                boxShadow: '0 0 20px rgba(168, 85, 247, 0.3)',
+                textShadow: '0 0 10px rgba(255, 255, 255, 0.8)'
+              }}>
               {meme.category}
             </span>
           </div>
-          <motion.div 
+          <motion.div
             className="relative mb-4 rounded-xl overflow-hidden h-32"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
@@ -273,8 +273,8 @@ const MemeCard = ({ meme, index, hoveredIndex, setHoveredIndex }) => {
               border: '1px solid rgba(255, 255, 255, 0.2)'
             }}
           >
-            <img 
-              src={meme.image} 
+            <img
+              src={meme.image}
               alt={meme.title}
               className="w-full h-full object-cover"
               style={{ filter: 'brightness(0.9) contrast(1.1) saturate(1.2)' }}
@@ -282,36 +282,36 @@ const MemeCard = ({ meme, index, hoveredIndex, setHoveredIndex }) => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
             <div className="absolute bottom-2 right-2">
               <span className="text-pink-200 text-xs font-medium px-2 py-1 rounded-full flex items-center transition-all duration-300"
-                    style={{
-                      background: 'rgba(236, 72, 153, 0.3)',
-                      backdropFilter: 'blur(10px)',
-                      border: '1px solid rgba(236, 72, 153, 0.5)',
-                      boxShadow: '0 0 15px rgba(236, 72, 153, 0.4)',
-                      textShadow: '0 0 8px rgba(255, 255, 255, 0.8)'
-                    }}>
+                style={{
+                  background: 'rgba(236, 72, 153, 0.3)',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(236, 72, 153, 0.5)',
+                  boxShadow: '0 0 15px rgba(236, 72, 153, 0.4)',
+                  textShadow: '0 0 8px rgba(255, 255, 255, 0.8)'
+                }}>
                 ❤️ {meme.likes}
               </span>
             </div>
           </motion.div>
-          <motion.h3 
+          <motion.h3
             className="text-lg font-bold text-white mb-3 transition-colors duration-300"
-            style={{ 
+            style={{
               transform: "translateZ(30px)",
               textShadow: '0 0 15px rgba(255, 255, 255, 0.6)'
             }}
           >
             {meme.title}
           </motion.h3>
-          <motion.p 
+          <motion.p
             className="text-gray-300 text-sm leading-relaxed"
-            style={{ 
+            style={{
               transform: "translateZ(20px)",
               textShadow: '0 0 10px rgba(255, 255, 255, 0.3)'
             }}
           >
             {meme.description}
           </motion.p>
-          <motion.div 
+          <motion.div
             className="flex gap-2 mt-4"
             style={{ transform: "translateZ(15px)" }}
           >
@@ -351,23 +351,23 @@ const MemeCard = ({ meme, index, hoveredIndex, setHoveredIndex }) => {
               <motion.div
                 key={i}
                 className="absolute text-xl"
-                initial={{ 
-                  x: Math.random() * 100 + '%', 
+                initial={{
+                  x: Math.random() * 100 + '%',
                   y: '100%',
                   opacity: 0,
                   scale: 0.5
                 }}
-                animate={{ 
+                animate={{
                   y: '-30%',
                   opacity: [0, 1, 1, 0],
                   scale: [0.5, 1.2, 1, 0.3],
                   rotate: [0, 360]
                 }}
-                transition={{ 
+                transition={{
                   duration: 3,
                   delay: i * 0.2,
                   repeat: Infinity,
-                  ease: "easeOut" 
+                  ease: "easeOut"
                 }}
                 style={{
                   filter: 'drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))',
@@ -385,22 +385,22 @@ const MemeCard = ({ meme, index, hoveredIndex, setHoveredIndex }) => {
                   background: 'rgba(255, 255, 255, 0.8)',
                   boxShadow: '0 0 10px rgba(168, 85, 247, 0.8)'
                 }}
-                initial={{ 
-                  x: Math.random() * 100 + '%', 
+                initial={{
+                  x: Math.random() * 100 + '%',
                   y: Math.random() * 100 + '%',
                   opacity: 0,
                   scale: 0
                 }}
-                animate={{ 
+                animate={{
                   opacity: [0, 1, 0],
                   scale: [0, 1.5, 0],
                   rotate: [0, 180]
                 }}
-                transition={{ 
+                transition={{
                   duration: 2,
                   delay: i * 0.3,
                   repeat: Infinity,
-                  ease: "easeInOut" 
+                  ease: "easeInOut"
                 }}
               />
             ))}

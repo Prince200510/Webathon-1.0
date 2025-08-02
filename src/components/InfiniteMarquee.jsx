@@ -4,7 +4,7 @@ import { useState } from 'react';
 const InfiniteMarquee = () => {
   const [isPaused, setIsPaused] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
-  
+
   const marqueeImages = [
     {
       id: 1,
@@ -17,7 +17,7 @@ const InfiniteMarquee = () => {
     {
       id: 2,
       url: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=250&fit=crop",
-      title: "Collection V2", 
+      title: "Collection V2",
       category: "Office",
       description: "Modern workspace designs",
       color: "from-blue-400 to-purple-400"
@@ -65,7 +65,7 @@ const InfiniteMarquee = () => {
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="marqueeGrid" width="50" height="50" patternUnits="userSpaceOnUse">
-                <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(168, 85, 247, 0.3)" strokeWidth="1"/>
+                <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(168, 85, 247, 0.3)" strokeWidth="1" />
               </pattern>
             </defs>
             <rect width="100%" height="100%" fill="url(#marqueeGrid)" />
@@ -94,7 +94,7 @@ const InfiniteMarquee = () => {
       </div>
       <div className="relative z-10">
         <div className="mb-12 text-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -150,7 +150,7 @@ const InfiniteMarquee = () => {
                   setIsPaused(false);
                   setHoveredItem(null);
                 }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.08,
                   y: -15,
                   rotateY: 5
@@ -158,9 +158,9 @@ const InfiniteMarquee = () => {
                 transition={{ duration: 0.4, type: "spring" }}
               >
                 <div className="relative h-full rounded-2xl overflow-hidden backdrop-blur-lg border border-purple-500/20"
-                     style={{
-                       background: 'linear-gradient(135deg, rgba(139, 69, 197, 0.1), rgba(59, 130, 246, 0.1))',
-                     }}>
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(139, 69, 197, 0.1), rgba(59, 130, 246, 0.1))',
+                  }}>
                   <div className="relative h-3/4 overflow-hidden">
                     <img
                       src={image.url}
@@ -223,9 +223,9 @@ const InfiniteMarquee = () => {
             transition={{ duration: 0.3 }}
           >
             <div className="inline-block px-6 py-3 rounded-2xl backdrop-blur-lg border border-purple-500/30"
-                 style={{
-                   background: 'linear-gradient(135deg, rgba(139, 69, 197, 0.2), rgba(59, 130, 246, 0.2))',
-                 }}>
+              style={{
+                background: 'linear-gradient(135deg, rgba(139, 69, 197, 0.2), rgba(59, 130, 246, 0.2))',
+              }}>
               <p className="text-white font-medium">
                 Currently viewing: <span className="text-purple-300">{hoveredItem.title}</span>
               </p>
